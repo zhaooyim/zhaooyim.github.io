@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-family: fantasy;
+}
+
+h2 {
+    font-family: fantasy;
+}
+
+.header {
+    background-color: whitesmoke;
+    padding: 0.1em;
+    text-align: center;
+}
+
+.footer {
+    margin: 2em;
+    text-align: center;
+    font-size: medium;
+}
+
+.navbar {
+    background-color: wheat;
+    text-align: center;
+    position: sticky;
+    top: 0;
+}
+
+.navbar-item {
+    display: inline-block;
+    margin: 0.5em;
+    padding: 0.3em;
+    border: 1px solid black;
+    border-radius: 8%;
+    font-family: fantasy;
+}
+
+.navbar-item:hover {
+    font-weight: bolder;
+    font-style: italic;
+    border: 1px solid grey;
+}
+
+.intro-section {
+    background-color: whitesmoke;
+    padding-top: 0;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+    margin-top: 0.1em;
+}
+
+#intro-photo {
+    float: right;
+    width: 170px;
+    height: auto;
+    margin-top: 1.5em;
+    border-radius: 50%;
+    border: 1px solid grey;
+}
+
+.fav-gallery {
+    background-color: burlywood;
+    padding: 0 1em 1em 1em;
+    margin-top: 0.1em;
+}
+
+
+.fav-gallery ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.fav-gallery li {
+    padding: 0.5em;
+    font-size: large;
+}
+
+.fav-photo-left {
+    float: left;
+    width: 50%;
+    height: auto;
+    padding: 0 6px 0 0;
+    border-radius: 3%;
+}
+
+.fav-photo-right {
+    float: right;
+    width: 50%;
+    height: auto;
+    padding: 0 0 0 6px;
+    border-radius: 3%;
+}
+
+.more-gallery {
+    background-color: whitesmoke;
+    padding: 0 1em 1em 1em;
+    margin-top: 0.1em;
+}
+
+.more-photo {
+    border: 1px solid #ccc;
+}
+
+.more-photo:hover {
+    border: 1px solid #777;
+}
+
+.more-photo img {
+    width: 100%;
+    height: auto;
+}
+
+.more-photos-item {
+    padding: 0 6px 0 0;
+    float: left;
+    width: 24.99999%;
+}
+
+@media screen and (max-width: 700px) {    
+    .fav-photo-left {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 0 0 6px 0;
+        border-radius: 3%;
+    }
+
+    .fav-photo-right {
+        float: left;
+        width: 100%;
+        height: auto;
+        padding: 0 0 6px 0;
+        border-radius: 3%;
+    }
+
+    .more-photos-item {
+        padding: 6px 0 0 0;
+        float: top;
+        width: 50%;
+    }
+}
+
+.clearfix {
+    overflow: auto;
+}
