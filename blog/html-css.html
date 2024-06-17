@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HTML and CSS</title>
+        <link rel="stylesheet" type="text/css" href="/styles/blog.css" />
+    </head>
+    <body>
+        <h1>HTML and CSS</h1>
+        <h2>What are the differences between relative, absolute, and fixed positioning?</h2>
+        <p>The key to understanding the different types of positioning is to identify the containing block of which the target element is offset from. Here are some examples of each type below.</p>
+        <p class="code-block">HTML code:<br/>
+            <code>
+                &lt;div class="outer"&gt;Outer<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box" id="two"&gt;Two&lt;/div&gt;<br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="box" id="one"&gt;One&lt;/div&gt;<br/>
+                &lt;/div&gt;<br/>
+                &lt;div class="box" id="three"&gt;Three&lt;/div&gt;<br/>
+            </code>
+        </p>
+        <p class="code-block">CSS code:<br/>
+            <code>
+                * {box-sizing: border-box;}<br/>
+                body {background-color: lightgreen;}<br/>
+                .box {width: 100px; height: 100px; background: red; color: white;}<br/>
+                #one {position: fixed; top: 50px; left: 320px; background: blue;}<br/>
+                #two {position: static; width: 250px; height: 250px;}<br/>
+                #three {width: 250px; height: 250px; background-color: purple;}<br/>
+                .outer {width: 500px; height: 400px; overflow: scroll; margin: 30px; background-color: grey;}
+            </code>
+        </p>
+        <ul>
+            <li>
+                <h3>Relative positioning</h3>
+                <p>Relatively positioned elements are offset a given amount from their normal position within the document, but without the offset affecting other elements.</p>
+                <img class="tech_drawing" src="/images/html-css/box-one-relative.png" alt="Relative positioning"/>
+            </li>
+            <li>
+                <h3>Absolute positioning</h3>
+                <p>Absolutely positioned elements are positioned relative to the nearest positioned ancestor (i.e., the nearest ancestor that is not static).</p>
+                <img class="tech_drawing" src="/images/html-css/box-one-absolute-before_scrolling.png" alt="Absolute positioning before scrolling"/>
+                <img class="tech_drawing" src="/images/html-css/box-one-absolute-after_scrolling.png" alt="Absolute positioning after scrolling"/>
+            </li>
+            <li>
+                <h3>Fixed positioning</h3>
+                <p>Fixed elements are positioned relative to the viewport, which means that they always stay in the same place even if the page is scrolled.</p>
+                <img class="tech_drawing" src="/images/html-css/box-one-fixed-after_scrolling.png" alt="Fixed positioning"/>
+            </li>
+        </ul>
+        <h2>Applications</h2>
+        <ul>
+            <li><a href="/index.html" target="_blank">Ryan Zhao's Blog</a></li>
+        </ul>
+        <h2>References</h2>
+        <ol>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/position" target="_blank">MDN: CSS position</a></li>
+        </ol>
+    </body>
+</html>
