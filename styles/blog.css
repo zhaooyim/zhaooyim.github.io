@@ -3,8 +3,11 @@
 }
 
 .content {
-    max-width: 60%;
+    max-width: 960px;
     margin: auto;
+    padding: 5px 20px;
+    background-color: whitesmoke;
+    border-radius: 1%;
 }
 
 .code-block {
