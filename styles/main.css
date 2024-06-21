@@ -129,6 +129,22 @@ h2 {
     width: 24.99999%;
 }
 
+.code-block {
+    background-color: whitesmoke;
+    border: 1px solid black;
+    padding: 10px;
+    width: 100%;
+    max-width: 700px;
+}
+
+.tech_drawing {
+    margin: 5px;
+    padding: 1px;
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid grey;
+}
+
 @media screen and (max-width: 700px) {    
     .fav-photo-left {
         float: left;
