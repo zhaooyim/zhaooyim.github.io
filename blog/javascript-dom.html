@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="../styles/main.css" rel="stylesheet" type="text/css">
+        <title>Javascript & DOM</title>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Javascript & DOM</h1>
+            <div class="navbar">
+                <span class="navbar-item">
+                    <a href="../index.html" target="_parent">Homepage</a>
+                </span>
+            </div>
+            <h2>What is Javascript and its releationship to HTML and CSS?</h2>
+            <p>Continuing on the Kiwi Fried Chicken menu story I used as analogy to describe HTML and CSS in the sprint reflection, 
+              after the success of the unified menu design thanks to KFCML and KFCSS, the CEO of KFC has decided to improve the ordering
+              experience of the customers by making the menu live and interactive.
+            </p>
+            <p>The idea is that in addtion to the hard copy menu there will be certain actions or plays triggered when the customers
+              order something on the menu.
+            </p>
+            <p>
+              For example,
+              <ol>
+                <li>when the customer order a dish, the order taker will ding a bell once and shout "Choice!" to confirm that
+                  the dish is added to the order, or otherwise the order taker will ding the bell twice and say "Not a problem!"
+                  if a dish is cancelled.
+                </li>
+                <li>
+                  if the restaurant is out of fish supply, the order taker will mark "Unavailable" next to Fish and Chips on the menu
+                  so the customers will be informed when making their orders.
+                </li>
+              </ol>
+            </p>
+            <p>To implement this idea, the challenge is KFCML and KFCSS are static meaning they are all about the look of the menu,
+              so the CEO introducs KFCScript to describe what actions to be taken by the order takers when a certain thing happens
+              and in a unified way so that all the shops will act the exact same way and can be updated easily and fast
+              without having to teach them one by one again and again when the scripts change.
+            </p>
+            <p>
+              For examples, the KFCScript scripts should look like the following for the examples above.
+            </p>
+            <p class="code-block">
+              The syntax of KFCScript<br><br>
+              if [something happens (the thing)]: do step 1 (what to say or where to do what); do step 2; do step 3;<br>
+              else if[something else happens (the thing)]: do step 1; do step 2;<br>
+              else: do step 1; do step 2;
+            </p>
+            <p class="code-block">
+              Example 1:<br><br>
+              if [any dish is ordered]: ding the bell(once); say ("Choice!") in an (exciting) tone;<br>
+              else if [any dish is cancelled]: ding the bell(twice); say ("Not a problem!") in an (soft) tone;<br>
+              else: wait;
+            </p>
+            <p class="code-block">
+              Example 2:<br><br>
+              if [any ingrediante (fish) is out]: change the font of ("Fish and Chips") to strike-through in the KFCSS description of the menu;
+            </p>
+            <p>As a result, the sale has been boosted again because the customers like this interactive ordering experience, and the
+              workers at the restaurants are very clear about what actions to take so they are happy to work there as well.
+            </p>
+            <h2>Explain control flow and loop using an example process from everyday life</h2>
+            <p>OK, let's forget about KFC for this topic.</p>
+            <p><span class="bold-text">An everyday life example of control flow is as below.</span> The steps have to be done one by one from the top meaning
+              the order should not be changed otherwise the result would be different. The ordered steps is a control flow.
+            </p>
+            <p class="code-block">
+              To cook Thai curry<br><br>
+              Step 1: Cut meat and veges in bite size<br>
+              Step 2: Add onion and curry paste in a wok on a medium heat<br>
+              Step 3: Add meat until browned<br>
+              Step 4: Add coconut milk<br>
+              Step 5: Add veges and wait until cooked<br>
+            </p>
+            <p><span class="bold-text">A loop is a kind of control flow where some if not all steps repeat themself to achieve some result.</span><br>
+              An example of loops would be doing laundry in batches because the steps to wash a batch of items are usually
+              the same but just with different batch of items to wash until all finish. They can be repeated as many times as needed.</p>
+            <p class="code-block">
+              To wash items<br><br>
+              Step 1: Turn on the washing machine<br>
+              Step 2: Change mode to Daily 60<br>
+              Step 3: Open the drum door<br>
+              Step 4: Put items in the drum<br>
+              Step 5: Press start and wait until finish<br>
+              Step 6: Open the door and unload the wash<br>
+              <span class="blue-text">Step 7: If there are more items to wash, go to Step 3<br></span>
+              Step 8: Turn off the machine<br>
+            </p>
+            <p>As you can see in this example, step 7 is where the loop happens.</p>
+            <h2>Describe what the DOM is and an example of how you might interact with it</h2>
+            <p>The DOM is similar to maps that we use everyday but instead of street addresses
+              it accommondates the information of everything we have in an HTML page and
+              provides a system to locate any specific thing ("a node") in the page by the relationship
+              between the node and its parent and children.
+            </p>
+            <p>Like we were to locate a friend's house in a map, given the address, we may find the
+              country first("the root node"), and then the state, the city, the suburb and finally
+              the stree number.
+            </p>
+            <p>The DOM also allows us to update the information of a specific node, so we may almost
+              do whatever we want with that node, such as changing its content and style, adding or removing
+              a child node, and even its own existence.
+            </p>
+            <h2>Explain the difference between accessing data from arrays and objects.</h2>
+            <p>Arrays store data in a continuous and ordered sequence of blocks where each block is next to each other
+              so any block can only be located by its index("the offset from 0") which is relative meaning
+              to visit a block at index 3 for example we must "go through"(at least feels like) the blocks prior at index 0, 1 and 2.
+            </p>
+            <img class="tech_drawing" src="../images/arrays_img.jpeg" alt="Arrays">
+            <p>Whereas objects store data in key-value pairs like a dictionary where each item("the value") is
+              associated with an unique name("the key"). Given the key, we can directly "jump" to the target item.
+            </p>
+            <img class="tech_drawing" src="../images/objects_img.jpeg" alt="Objects">
+            <h2>Explain what functions are and why they are helpful.</h2>
+            <p>Functions are like tools in a toolbox. Like say we were making a chair, we would just pick up and use
+              ("call") a hammer, a ruler, a hand saw and maybe a screwdriver whenever we need to do a certain task
+              during the making.
+            </p>
+            <p>Tools("functions") are helpful because they are already there and we can expect the same outcome
+              from using them, so that we can focus on our goal("the project") without having to worry about making
+              a hammer every time when we need one.
+            </p>
+        </div>
+    </body>
+</html>
