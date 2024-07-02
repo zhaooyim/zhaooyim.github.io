@@ -10,10 +10,6 @@ h2 {
     font-family: fantasy;
 }
 
-hr.dotted {
-  border-top: 3px dotted #bbb;
-}
-
 .blue-text {
   color: blue;
 }
